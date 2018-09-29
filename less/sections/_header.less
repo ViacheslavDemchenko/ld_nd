@@ -1,0 +1,103 @@
+.header__bg {
+	position: relative;
+	width: 100%;
+	height: 46.875em;
+}
+
+.header__bg__img {
+	position: absolute;
+	left: -5%;
+	top: -5%;
+	width: 110%;
+	height: 110%;
+	background-image: url("../img/bg/header-bg_7.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.quote {
+	content: "";
+	position: absolute;
+    top: 40%;
+    right: 75%;
+    transform: translateX(50%) translateY(50%);
+    width: 40%;
+	font-family: 'Roboto Medium Italic';
+	font-size: 1.5em;
+	font-weight: 500;
+    font-style: italic;
+	color: #FFF;
+
+	@media (min-width: 320px) and (max-width: 767px) {
+		text-align: center;
+		width: 90%;
+		top: 80%;
+		right: 50%;
+		transform: translateX(50%) translateY(50%);
+	}
+}
+
+.timer {
+	content: "";
+	position: absolute;
+	top: 30%;
+    right: 3%;
+    padding: 1em;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 3.125rem;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    @media (min-width: 320px) and (max-width: 767px) {
+		width: 90%;
+		top: 5%;
+		right: 50%;
+		transform: translateX(50%) translateY(50%);
+	}
+}
+
+.timer__text,
+.timer__title,
+.timer__text--down {
+	text-align: center;
+	color: #fff;
+}
+
+.timer__text--down {
+	margin: 0;
+	margin-top: 3em;
+}
+
+.timer__numbers {
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	font-size: 1.875rem;
+}
+
+.timer__numbers > div {
+	padding: 0.625rem;
+	border-radius: 0.1875rem;
+	display: inline-block;
+}
+
+.timer__numbers div > span {
+	padding: 0.9375rem;
+	border-radius: 0.1875rem;
+	display: inline-block;
+}
+
+.smalltext {
+	padding-top: 0.3125rem;
+	font-size: 0.7em;
+
+	@media (min-width: 425px) {
+		font-size: 0.9em;
+	}
+
+	@media (min-width: 992px) {
+		font-size: 1em;
+	}
+}

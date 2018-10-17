@@ -1,7 +1,7 @@
 .header__bg {
 	position: relative;
 	width: 100%;
-	height: 46.875em;
+	height: 46.875rem;
 }
 
 .header__bg__img {
@@ -10,7 +10,7 @@
 	top: -5%;
 	width: 110%;
 	height: 110%;
-	background-image: url("../img/bg/header-bg_7.png");
+	background-image: url("../img/bg/header-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -23,7 +23,7 @@
     transform: translateX(50%) translateY(50%);
     width: 40%;
 	font-family: 'Roboto Medium Italic';
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	font-weight: 500;
     font-style: italic;
 	color: #FFF;
@@ -31,9 +31,13 @@
 	@media (min-width: 320px) and (max-width: 767px) {
 		text-align: center;
 		width: 90%;
-		top: 80%;
+		top: 74%;
 		right: 50%;
 		transform: translateX(50%) translateY(50%);
+	}
+
+	@media (min-width: 320px) and (max-width: 575px) {
+		display: none;
 	}
 }
 
@@ -42,7 +46,7 @@
 	position: absolute;
 	top: 30%;
     right: 3%;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
     box-sizing: border-box;
     border-radius: 3.125rem;
@@ -51,53 +55,53 @@
 
     @media (min-width: 320px) and (max-width: 767px) {
 		width: 90%;
-		top: 5%;
+		top: 20%;
 		right: 50%;
 		transform: translateX(50%) translateY(50%);
 	}
-}
 
-.timer__text,
-.timer__title,
-.timer__text--down {
-	text-align: center;
-	color: #fff;
-}
+	&__text,
+	&__title,
+	&__text--down {
+		text-align: center;
+		color: #fff;
+	}
 
-.timer__text--down {
-	margin: 0;
-	margin-top: 3em;
-}
+	&__text--down {
+		margin: 0;
+		margin-top: 3rem;
+	}
 
-.timer__numbers {
-	font-family: sans-serif;
-	color: #fff;
-	display: inline-block;
-	font-weight: 100;
-	font-size: 1.875rem;
-}
+	&__numbers {
+		font-family: sans-serif;
+		color: #fff;
+		display: inline-block;
+		font-weight: 100;
+		font-size: 1.875rem;
+	}
 
-.timer__numbers > div {
-	padding: 0.625rem;
-	border-radius: 0.1875rem;
-	display: inline-block;
-}
+	&__numbers > div {
+		padding: 0.625rem;
+		border-radius: 0.1875rem;
+		display: inline-block;
+	}
 
-.timer__numbers div > span {
-	padding: 0.9375rem;
-	border-radius: 0.1875rem;
-	display: inline-block;
+	&__numbers div > span {
+		padding: 0.9375rem;
+		border-radius: 0.1875rem;
+		display: inline-block;
+	}
 }
 
 .smalltext {
 	padding-top: 0.3125rem;
-	font-size: 0.7em;
+	font-size: 0.7rem;
 
 	@media (min-width: 425px) {
-		font-size: 0.9em;
+		font-size: 0.9rem;
 	}
 
 	@media (min-width: 992px) {
-		font-size: 1em;
+		font-size: 1rem;
 	}
 }

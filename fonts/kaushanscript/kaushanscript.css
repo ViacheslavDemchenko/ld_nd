@@ -1,6 +1,14 @@
 @font-face {
-    font-family: 'Kaushan Script';
-    src: local('Kaushan Script'), local('KaushanScript-Regular'), url('Kaushanscript.woff2') format('woff2'), url('Kaushanscript.woff') format('woff'), url('Kaushanscript.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Kaushanscript-Regular';
+  src: url('kaushanscript-regular.woff') format('woff'),
+       url('kaushanscript-regular.ttf') format('truetype'),
+       url('kaushanscript-regular.svg#kaushanscript-regular') format('svg'),
+       url('kaushanscript.eot'),
+       url('kaushanscript.woff2') format('woff2'),
+       url('kaushanscript.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+
+

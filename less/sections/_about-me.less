@@ -1,0 +1,128 @@
+.about-me {
+	position: relative;
+	padding: 4rem 0 2rem;
+	background-color: #E6E6FA;
+
+	// @media (min-width: 768px) and (max-width: 992px) {
+	// 	padding-bottom: 0;
+	// }
+
+	// @media (min-width: 375px) {
+	// 	margin-top: -2rem;
+	// }
+
+	// @media (min-width: 1024px) {
+	// 	margin-top: -15rem;
+	// }
+
+	// @media (min-width: 1200px) {
+	// 	margin-top: -13rem;
+	// }
+
+	// @media (min-width: 1400px) {
+	// 	margin-top: -3rem;
+	// }
+
+	&__title {
+		font-family: 'Roboto-Bold';
+		font-style: normal;
+		font-weight: bold;
+		margin: 0;
+		text-align: center;
+	}
+
+	&__img__wrap {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+	&__personal__photo {
+		border: 0.625rem solid #fff;
+	 	border-bottom: 2.8125rem solid #fff;
+		box-shadow: 0 0.3125rem 0.3125rem 0.1875rem rgba(169, 169, 169, .8);
+	}
+
+	&__personal__photo__text {
+		position: absolute;
+		bottom: 1.5%;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		font-family: 'Kaushanscript-Regular', cursive;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.125rem;
+		color: #888;
+
+		@media (min-width: 576px) {
+			bottom: 3%;
+		}
+
+		@media (min-width: 768px) {
+			bottom: 1.5%;
+		}
+
+		@media (min-width: 768px) {
+			bottom: 2%;
+		}
+
+		@media (min-width: 1200px) {
+			bottom: 1.5%;
+		}
+
+		@media (min-width: 1440px) {
+			bottom: 1.5%;
+		}
+	}
+}
+
+.about-me-tabs {
+	margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 1rem;
+	background-color: #FFF;
+	box-shadow: 0 0.3125rem 0.3125rem 0.1875rem rgba(169, 169, 169, .8);
+}
+
+.tab {
+	text-align: left;
+}
+
+.tab__input, 
+.tab {
+    display: none;
+}
+
+#one:checked ~ .tab--one,
+#two:checked ~ .tab--two,
+#three:checked ~ .tab--three {
+	display: block;
+}
+
+.about-me-tabs > label {
+	padding: 0.5rem 1.5rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    @media (min-width: 375px) {
+    	padding: 0.8rem 2rem;
+    }
+}
+
+.tab__input > label:hover,
+.tab__input:checked + label {
+	background: #EEE;
+	box-shadow: 0 0.2rem 0.2rem rgba(169, 169, 169, .8);
+}
+
+.tab__title {
+	font-family: 'Roboto-Bold';
+	font-weight: bold;
+	margin-top: 3rem;
+}

@@ -14,12 +14,9 @@
 
 	<!-- Syles -->
 	<link rel="stylesheet" href="lib/bootstrap_4_grid/css/bootstrap-grid.min.css">
-	<!-- <link rel="stylesheet" href="libs/owlcarousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="libs/owlcarousel/owl.theme.default.min.css">
-	<link rel="stylesheet" href="libs/bootstrap_4_grid/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="libs/accordeon/jquery.accordion.css"> -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="fonts/roboto/roboto.css">
+	<link rel="stylesheet" href="fonts/kaushanscript/kaushanscript.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- FavIcons -->
@@ -46,11 +43,13 @@
 	<div class="container-fluid">
 	
 				<header class="row header">
-				
-					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+					
+					<div class="col-9 col-md-6 col-lg-6 col-xl-4">
 						<div class="logo">
-							<h1 class="logo__title">Надежда Демченко</h1>
-							<p class="logo__desc">Психотерапевт, гештальт терапевт, кризисный психолог, психологическая консультация по скайпу</p>
+							<a href="index.html">
+								<h1 class="logo__title">Надежда Демченко</h1>
+								<p class="logo__desc">Психотерапевт, гештальт терапевт, кризисный психолог, психологическая консультация по скайпу</p>
+							</a>
 						</div>
 					</div>
 					<!-- /.col-md-6 col-lg-3 -->
@@ -66,23 +65,24 @@
 					<div class="col-lg-12 col-xl-5">
 						<nav class="menu">
 							<ul class="menu__list">
-								<li class="menu__list__item"><a href="#" class="menu__list__link">Контакты</a></li>
-								<li class="menu__list__item"><a href="#" class="menu__list__link">Помощь психолога</a></li>
-								<li class="menu__list__item"><a href="#" class="menu__list__link">Статьи</a></li>
-								<li class="menu__list__item"><a href="#" class="menu__list__link">Обо мне</a></li>
+								<li class="menu__list__item"><a href="#contacts" class="menu__list__link">Контакты</a></li>
+								<li class="menu__list__item"><a href="#help" class="menu__list__link">Помощь психолога</a></li>
+								<li class="menu__list__item"><a href="#articles" class="menu__list__link">Статьи</a></li>
+								<li class="menu__list__item"><a href="#about-me" class="menu__list__link">Обо мне</a></li>
 							</ul>
 						</nav>	
 					</div>
 					<!-- /.col-md-6 col-lg-3 -->
-					<div class="mobile-menu"></div>
+					<button id="menu__button" class="cmn-toggle-switch cmn-toggle-switch__htx">
+  						<span>toggle menu</span>
+					</button>
+					
 				</header>
 				<!-- /.header -->
 
 				<div class="header__bg"> 
 					<div class="header__bg__wrap">
 						<div class="header__bg__img"></div>
-						<div id="typed-strings"></div>
-						<span class="quote" id="typed"></span>
 						<div class="timer">
 							<p class="timer__text">На протяжении ограниченного периода времени я предлагаю Вам БЕСПЛАТНУЮ первую консультацию. Длительность первой сесии 30 минут.</p>
 							<h3 class="timer__title">Предложение действительно еще:</h3>
@@ -106,10 +106,12 @@
 				            </div>
 							<p class="timer__text--down">Поспешите! Вы не рискуете ничем, разве что расстаться с беспокоящей Вас проблемой!</p>
 						</div>
+						<div id="typed-strings"></div>
+						<span class="quote" id="typed"></span>
 					</div>
 				</div>
 		
-  <main class="main">
+<main class="main">
 		<section class="services">
 			<div class="services__inner-wrap">
 				<div class="row justify-content-center">
@@ -163,7 +165,279 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="help" id="help">
+		<div class="row justify-content-center row__pb">
+			<h2 class="help__title">Помощь психолога</h2>
+		</div>
+		<div class="container">
+			<div class="row help__first-row">
+				<div class="col-md-12 col-lg-6">
+					<article class="help__card">
+						<h3 class="help__card__title">Здесь и сейчас</h3>
+						<p class="help__card__text">
+							Прошлого не существует. Будущего - нет. Есть только ЗДЕСЬ и СЕЙЧАС. Некуда спешить. Все вовремя и наилучшим образом. Нам сложно в это поверить, но это так.</p>
+						<p class="help__card__text">
+							Зачем лить слёзы о "сбежавшем молоке"(прошлом) или полагаться на "иллюзорные и бездеятельные мыльные пузыри" - мечты и фантазии(будущем)? Наша жизнь состоит из мгновений настоящего. И очень важно проживать свою жизнь, чувствовать себя, замечать мир.</p>
+						<p class="help__card__text">
+							Если ты умеешь осознанно делать выборы и замедляться - это то, что позволит тебе быть более спокойным и удовлетворенным.</p>
+					</article>
+				</div>
+				<div class="col-md-12 col-lg-6">
+					<article class="help__card">
+						<h3 class="help__card__title">Твой выбор - твоя ответственность</h3>
+						<p class="help__card__text">
+							Всё, что происходит в твоей судьбе, те, с кем ты живёшь или общаешься, там, где ты работаешь - это твой выбор. Конечно же, очень хочется найти причину своих проблем и неудач во внешнем мире. Найти виновников своего несчастья, но это бессмысленное занятие.</p>
+						<p class="help__card__text">
+							И, хорошая новость заключается в том, что если тебе что-то не нравится - ты можешь это изменить. Выбрать интересную работу, переехать в другой город, выйти из сложных и истощающих отношений.</p>
+						<p class="help__card__text">
+							Для этого нужна смелость, чтобы принять ответственность за свою жизнь. Ты - хозяин своей жизни и кузнец своего счастья! Твои выборы в настоящем формируют твое будущее.</p>
+					</article>
+				</div>
+			</div>
+			<div class="row help__second-row">
+				<div class="col-md-12 col-lg-6">
+					<article class="help__card">
+						<h3 class="help__card__title">Нет ожиданий - нет страданий</h3>
+						<p class="help__card__text">
+							Когда человек что-то ожидает и этого не происходит - он неизбежно сталкивается с разочарованием. И чем выше ожидание, тем сильнее боль разочарования.</p>
+						<p class="help__card__text">
+							Если ты очень ждёшь какое-то событие, ты уже представил, что там будет происходить, с кем ты будешь общаться и что говорить. То, может случиться, что реальность может быть другой, нежели ты ее представлял.</p>
+						<p class="help__card__text">
+							И, о ужас! Ты не контролируешь реальность(даже потоотделение свое не контролируешь). Поэтому важно принимать изменения спокойно и с благодарностью.</p>
+					</article>
+				</div>
+				<div class="col-md-12 col-lg-6">
+					<article class="help__card">
+						<h3 class="help__card__title">Любовь и ценность себя</h3>
+						<p class="help__card__text">
+							Всё самое фундаментальное должно случиться вначале с тобой. Всё парадоксально просто: хочешь, чтобы тебя любили - полюби себя. Хочешь, чтобы о тебе заботились - относись к себе бережно и будь внимателен к своим потребностям. Хочешь, чтобы тебя уважали и ценили - а ты себя ценишь? Ты важен для себя?</p>
+						<p class="help__card__text">
+							Раньше я думала, что это должен мне дать кто-то другой. Со временем я осознала, что это глупость. Ведь, если ты себя не любишь, ты даже не позволишь другому это дать тебе. Так как будешь чувствовать, что ты этого недостоин. И тебе нужно стараться и заслуживать любовь.</p>
+						<p class="help__card__text">
+							Помни, что ты самый родной и близкий человек для самого себя. И только тогда ты по настоящему сможешь дарить и принимать любовь.</p>
+					</article>
+				</div>
+			</div>
+			<div class="row help__third-row">
+				<div class="col-md-12 col-lg-6">
+					<article class="help__card">
+						<h3 class="help__card__title">Принятие себя, мира, другого...</h3>
+						<p class="help__card__text">
+							Принимай мир таким, какой он есть. Без ожиданий, оценок и желания изменить. Бесполезно менять другого человека или мир. Без толку ругать себя, искать виноватых или сетовать на судьбу. Ты можешь изменить себя, но первый шаг начинается с принятия.</p>
+						<p class="help__card__text">
+							Приблизительно так: да, я ленивая задница, у меня нет отношений и я живу у родителей. Пока так. И это твой выбор. Только с момента принятия, а не борьбы, ты можешь измениться.</p>
+						<p class="help__card__text">
+							Это такое облегчение принимать себя, даже несовершенного, и принимать другого - ИНЫМ. Без желания перекроить его под себя. Принимай себя, и ты будешь терпимее к недостаткам и выборам других.</p>
+					</article>
+				</div>
+				<div class="col-md-12 col-lg-6">
+					<article class="help__card">
+						<h3 class="help__card__title">Будь честным и искренним с собой</h3>
+						<p class="help__card__text">
+							Часто люди живут не своей жизнью. Носят устаревшие маски, играют в ненужные игры. Соответствуют чужим ожиданиям и представлениям. Чтобы быть удобным и хорошим. Делают то, что от них хотят. И в этом состоит их предательство. Предательство самого себя. Тогда важно остановиться и спросить себя: Кто я? Куда я иду? И чего я хочу? Быть честным и искренним с собой. Да, за свои желания, потребности и выборы придется нести ответственность. </p>
+						<p class="help__card__text">
+							Но, мне кажется, что жить ненастоящей жизнью, ощущать внутри пустоту и бессмысленность - намного более тяжелое бремя. Рискни быть собой: искренним, естественным и настоящим - и ты ощутишь вкус жизни! Удачи тебе!</p>
+						<p class="help__card__text">
+							Это такое облегчение принимать себя, даже несовершенного, и принимать другого - ИНЫМ. Без желания перекроить его под себя. Принимай себя, и ты будешь терпимее к недостаткам и выборам других.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="principles" id="articles">
+		<div class="row justify-content-center">
+			<h2 class="principles__title" >Полезные принципы для твоей счастливой жизни</h2>
+		</div>
+		<div class="container container__pt">
+			<div class="row">
+				<div class="col-lg-6">
+
+					<div class="principles-img principles-img--active">
+						<img src="img/articles/img_1.jpeg" alt="">
+					</div>
+					<div class="principles-img">
+						<img src="img/articles/img_2.jpeg" alt="">
+					</div>
+					<div class="principles-img">
+						<img src="img/articles/img_1.jpeg" alt="">
+					</div>
+					<div class="principles-img">
+						<img src="img/articles/img_2.jpeg" alt="">
+					</div>
+					<div class="principles-img">
+						<img src="img/articles/img_1.jpeg" alt="">
+					</div>
+					<div class="principles-img">
+						<img src="img/articles/img_2.jpeg" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<article class="principles__article principles__article--active">
+						<h3 class="principles__article__title">Здесь и сейчас</h3>
+						<p class="principles__article__text">
+							Прошлого не существует. Будущего - нет. Есть только ЗДЕСЬ и СЕЙЧАС. Некуда спешить. Все вовремя и наилучшим образом. Нам сложно в это поверить, но это так.</p>
+						<p class="principles__article__text">
+							Зачем лить слёзы о "сбежавшем молоке"(прошлом) или полагаться на "иллюзорные и бездеятельные мыльные пузыри" - мечты и фантазии(будущем)? Наша жизнь состоит из мгновений настоящего. И очень важно проживать свою жизнь, чувствовать себя, замечать мир.</p>
+						<p class="principles__article__text">
+							Если ты умеешь осознанно делать выборы и замедляться - это то, что позволит тебе быть более спокойным и удовлетворенным.</p>
+					</article>
+					<article class="principles__article">
+						<h3 class="principles__article__title">Твой выбор - твоя ответственность</h3>
+						<p class="principles__article__text">
+							Всё, что происходит в твоей судьбе, те, с кем ты живёшь или общаешься, там, где ты работаешь - это твой выбор. Конечно же, очень хочется найти причину своих проблем и неудач во внешнем мире. Найти виновников своего несчастья, но это бессмысленное занятие.</p>
+						<p class="principles__article__text">
+							И, хорошая новость заключается в том, что если тебе что-то не нравится - ты можешь это изменить. Выбрать интересную работу, переехать в другой город, выйти из сложных и истощающих отношений.</p>
+						<p class="principles__article__text">
+							Для этого нужна смелость, чтобы принять ответственность за свою жизнь. Ты - хозяин своей жизни и кузнец своего счастья! Твои выборы в настоящем формируют твое будущее.</p>
+					</article>
+					<article class="principles__article">
+						<h3 class="principles__article__title">Нет ожиданий - нет страданий</h3>
+						<p class="principles__article__text">
+							Когда человек что-то ожидает и этого не происходит - он неизбежно сталкивается с разочарованием. И чем выше ожидание, тем сильнее боль разочарования.</p>
+						<p class="principles__article__text">
+							Если ты очень ждёшь какое-то событие, ты уже представил, что там будет происходить, с кем ты будешь общаться и что говорить. То, может случиться, что реальность может быть другой, нежели ты ее представлял.</p>
+						<p class="principles__article__text">
+							И, о ужас! Ты не контролируешь реальность(даже потоотделение свое не контролируешь). Поэтому важно принимать изменения спокойно и с благодарностью.</p>
+					</article>
+					<article class="principles__article">
+						<h3 class="principles__article__title">Любовь и ценность себя</h3>
+						<p class="principles__article__text">
+							Всё самое фундаментальное должно случиться вначале с тобой. Всё парадоксально просто: хочешь, чтобы тебя любили - полюби себя. Хочешь, чтобы о тебе заботились - относись к себе бережно и будь внимателен к своим потребностям. Хочешь, чтобы тебя уважали и ценили - а ты себя ценишь? Ты важен для себя?</p>
+						<p class="principles__article__text">
+							Раньше я думала, что это должен мне дать кто-то другой. Со временем я осознала, что это глупость. Ведь, если ты себя не любишь, ты даже не позволишь другому это дать тебе. Так как будешь чувствовать, что ты этого недостоин. И тебе нужно стараться и заслуживать любовь.</p>
+						<p class="principles__article__text">
+							Помни, что ты самый родной и близкий человек для самого себя. И только тогда ты по настоящему сможешь дарить и принимать любовь.</p>
+					</article>
+					<article class="principles__article">
+						<h3 class="principles__article__title">Принятие себя, мира, другого...</h3>
+						<p class="principles__article__text">
+							Принимай мир таким, какой он есть. Без ожиданий, оценок и желания изменить. Бесполезно менять другого человека или мир. Без толку ругать себя, искать виноватых или сетовать на судьбу. Ты можешь изменить себя, но первый шаг начинается с принятия.</p>
+						<p class="principles__article__text">
+							Приблизительно так: да, я ленивая задница, у меня нет отношений и я живу у родителей. Пока так. И это твой выбор. Только с момента принятия, а не борьбы, ты можешь измениться.</p>
+						<p class="principles__article__text">
+							Это такое облегчение принимать себя, даже несовершенного, и принимать другого - ИНЫМ. Без желания перекроить его под себя. Принимай себя, и ты будешь терпимее к недостаткам и выборам других.</p>
+					</article>
+					<article class="principles__article">
+						<h3 class="principles__article__title">Будь честным и искренним с собой</h3>
+						<p class="principles__article__text">
+							Часто люди живут не своей жизнью. Носят устаревшие маски, играют в ненужные игры. Соответствуют чужим ожиданиям и представлениям. Чтобы быть удобным и хорошим. Делают то, что от них хотят. И в этом состоит их предательство. Предательство самого себя. </p>
+						<p class="principles__article__text">
+							Но, мне кажется, что жить ненастоящей жизнью, ощущать внутри пустоту и бессмысленность - намного более тяжелое бремя. Рискни быть собой: искренним, естественным и настоящим - и ты ощутишь вкус жизни! Удачи тебе!</p>
+						<p class="principles__article__text">
+							Это такое облегчение принимать себя, даже несовершенного, и принимать другого - ИНЫМ. Без желания перекроить его под себя. Принимай себя, и ты будешь терпимее к недостаткам и выборам других.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-me" id="about-me">
+		<div class="row justify-content-center">
+			<h2 class="about-me__title">Обо мне</h2>
+		</div>
+		<div class="container container__pt">
+			<div class="row">
+				<div class="col-md-6 col-lg-6 about-me--pb">
+					<div class="about-me__img__wrap">
+						<img class="about-me__personal__photo" src="img/about-me/2.jpeg" width="540" height="501" alt="Демченко Надежда - гештальт терапевт, кризисный психолог" title="Демченко Надежда - гештальт терапевт, кризисный психолог">
+						<p class="about-me__personal__photo__text">Демченко Надежда - гештальт терапевт, кризисный психолог</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6">
+					<div class="about-me-tabs column">
+
+						<input class="tab__input" type="radio" name="nav" id="one" checked="checked"/>
+						<label for="one">What</label>
+
+						<input class="tab__input"  type="radio" name="nav" id="two"/>
+						<label for="two">Where</label>
+
+						<input class="tab__input" type="radio" name="nav" id="three"/>
+						<label for="three">Why</label>
+
+						<article class="tab tab--one">
+						    <h3 class="tab__title">What is Lorem Ipsum?</h3>
+						    <p class="tab__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</article>
+
+						<article class="tab tab--two">
+						    <h3 class="tab__title">Where does it come from?</h3>
+						    <p class="tab__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+						    <p class="tab__text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+						</article>
+
+						<article class="tab tab--three">
+						    <h3 class="tab__title">Why do we use it?</h3>
+						    <p class="tab__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="container container__pt__pb--smaller">
+			<div class="row">		
+				<div class="col-md-6 col-lg-3">
+					<a href="img/gallery/slide-1.jpg" target="_blank"><img src="img/gallery/slide-1.jpg" alt="Сертификат участия в девятом летнем гештальд интенсиве в Карпатах" title="Сертификат участия в девятом летнем гештальд интенсиве в Карпатах"></a>
+				</div>
+				<div class="col-md-12 col-lg-6">
+					<a href="img/gallery/slide-2.jpg" target="_blank"><img src="img/gallery/slide-2.jpg" alt="Сертификат участия в харьковской международной гештальд конференции" title="Сертификат участия в харьковской международной гештальд конференции"></a>
+				</div>
+				<div class="col-md-6 col-lg-3 first-order">
+					<a href="img/gallery/slide-3.jpg" target="_blank"><img src="img/gallery/slide-3.jpg" alt="Сертификат основы гештальд-терапии" title="Сертификат основы гештальд-терапии"></a>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
+
+	<footer class="footer" id="contacts">
+		<div class="container">
+			<div class="row justify-content-between align-items-baseline">
+				<div class="col-lg-4">
+					<div class="footer__logo">
+						<a href="index.html" class="logo__link--footer">
+							<h1 class="footer__title">Надежда Демченко</h1>
+							<p class="footer__desc">Психотерапевт, гештальт терапевт, кризисный психолог, психологическая консультация по скайпу</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<ul class="social__list">
+						<li class="social__list__item">
+							<a href="#" class="social__list__link facebook__link"></a>
+						</li>
+
+						<li class="social__list__item">
+							<a href="#" class="social__list__link telegram__link"></a>
+						</li>
+
+						<li class="social__list__item">
+							<a href="#" class="social__list__link instagram__link"></a>
+						</li>
+							
+						<li class="social__list__item">
+							<a href="#" class="social__list__link vkontakte__link"></a>
+						</li>
+					</ul>
+					<div class="copyright-block">
+						<p class="copyright">© Copyright. Все права защищены</p>
+						<p class="year"></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<h4 class="advert__title">Разработка сайтов под заказ</h4>
+					<div class="btn-wrap">
+						<button class="site-order-btn">заказать сайт</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 
 	</div>
@@ -172,6 +446,12 @@
 
 <script src="lib/jquery/jquery-3.3.1.min.js"></script>
 <script src="lib/typedjs/typed.min.js"></script>
-<script src="js/main.js"></script>
+<script src="lib/pagescroll2id/jquery.malihu.PageScroll2id.js"></script>
+<!-- <script src="js/main_js.js"></script> -->
+<script src="js/main_jq.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
+
+
+

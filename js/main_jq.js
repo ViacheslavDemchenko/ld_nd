@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+//ПРЕЛОАДЕР
+
+	var preloader = $('.loaderArea'),
+	    loader = preloader.find('.loader');
+	    loader.fadeOut();
+	    preloader.delay(350).fadeOut('slow');
+
 //МОБИЛЬНОЕ МЕНЮ И ФОН МЕНЮ
 
 	var menuButton = $('#menu__button'),

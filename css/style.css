@@ -58,9 +58,6 @@ html {
 .about-me--pb {
   padding-bottom: 2rem;
 }
-.hidden {
-  visibility: hidden;
-}
 a {
   color: #000;
   text-decoration: none;
@@ -1113,6 +1110,10 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.gallery__title {
+  margin: 0;
+  visibility: hidden;
 }
 .first-order {
   -webkit-box-ordinal-group: 0;

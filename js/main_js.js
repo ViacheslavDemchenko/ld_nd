@@ -148,4 +148,36 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 	};
 	getYear();
+
+	//ОТКРЫТИЕ ФОРМЫ ОБРАТНОЙ СВЯЗИ (МОДАЛЬНОГО ОКНА)
+	//И ЗАПРЕТ ПРОКРУТКИ ЭКРАНА ПРИ ОТКРЫТОЙ ФОРМЕ ОБРАТНОЙ СВЯЗИ	
+
+	var form = document.querySelector('.contact-form__overlay'),
+	    //Подложка
+	formOpen = document.querySelector('.contact-form__open'),
+	    //Ссылка для открытия модального окна
+	formClose = document.querySelector('.contact-form__close'),
+	    //Кнопка закрытия модального окна
+	body = document.body; //Body
+
+	formOpen.addEventListener('click', function () {
+		form.style.display = 'block'; //Открытие модельного окна
+		document.body.classList.add('no-scroll'); //Запрет на прокрутку экрана
+	});
+
+	formClose.addEventListener('click', function () {
+		form.style.display = 'none'; //Закрытие модельного окна
+		document.body.classList.remove('no-scroll'); //Снятие запрета на прокрутку экрана
+	});
+
+	//Закрытие модального окна подарка по клику за его пределами
+	window.addEventListener('click', function (e) {
+		var target = e.target;
+		if (target.closest('.contact-form__wrap') && !target.closest('.contact-form__close')) {
+			e.stopPropagation();
+		} else if (target.closest('.contact-form__overlay')) {
+			form.style.display = 'none';
+			document.body.classList.remove('no-scroll'); //Снятие запрета на прокрутку экрана
+		}
+	});
 });

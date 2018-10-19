@@ -58,6 +58,57 @@ $(document).ready(function() {
 //ПЛАВНАЯ ПРОКРУТКА ЭКРАНА
 
   	$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({highlightSelector:"nav a"
-	}); 
+	});
 
+//ВАЛИДАЦИЯ ФОРМЫ ОТПРАВКИ СООБЩЕНИЯ
+
+	$('#contact-form').validate({
+			rules: {
+				name: {
+					required: true
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				message: {
+					required: true
+				}
+			},
+
+			messages: {
+				name: 'Пожалуйста, введите свое имя',
+				email: {
+					required: 'Пожалуйста, введите свой email',
+					email: 'Email адрес должен быть в формате name@domain.com . Возможно вы ввели email с ошибкой.'
+				},
+				message: 'Пожалуйста, введите текст сообщения'
+			},
+
+			submitHandler: function(form) {
+			  ajaxFormSubmit();
+			}
+		});
+
+//ФУНКЦИЯ ОТРАВКИ ЗАПРОСА НА СЕРВЕР ЧЕРЕЗ AJAX
+
+	function ajaxFormSubmit(){
+		var string = $('#contact-form').serialize();
+
+		$.ajax({
+			type: 'POST', 
+			url: 'php/mail.php',
+			data: string,
+			
+			success: function(html){
+				$('#contact-form').slideUp(800);
+				$('#answer').html(html);
+			}
+		});
+		return false; 
+	}; 
+
+//АНИМАЦИЯ
+
+	new WOW().init();
 });

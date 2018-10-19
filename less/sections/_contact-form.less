@@ -1,0 +1,199 @@
+.contact-form__overlay {
+	position: fixed;
+	z-index: 90000;
+	left: 0;
+	top: 0;
+	right:0;
+	bottom:0;
+	display: none;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, .5);
+
+	.contact-form__wrap {
+		position: absolute;
+		width: 90%;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		border-radius: 0.625rem;
+		background-color: grey;
+
+		@media (min-width: 768px) {
+			width: 60%;
+		}
+
+		@media (min-width: 992px) {
+			width: 50%;
+		}
+		
+		.contact-form {
+			position: relative;
+			width: 90%;
+			margin: 0 auto;
+			padding: 1.25rem;
+
+			&__title {
+				text-align: center;
+				font-family: 'Roboto-Bold';
+				font-style: normal;
+				font-weight: bold;
+				font-size: 2rem;
+				color: #FFF;	
+			}
+
+			&__close {
+
+				&::before {
+					position: absolute;
+					content: "";
+					top: 0.625rem;
+					right: 0.625rem;
+					width: 1.875rem;
+					height: 1.875rem;
+					background-image: url("../img/icons/close-button.svg");
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					cursor: pointer;
+				}
+			}
+
+			&__input {
+				width: 100%;
+				margin-bottom: 0.625rem;
+				padding: 0.625rem 1.1875rem;
+				color: #00599A;
+				font-size: 1rem;
+				font-weight: bold;
+				border: 0.1875rem solid #FFF;
+				border-radius: 0.5rem;
+				background-color: #FFF;
+				transition: border-color .3s ease-in-out;
+
+				&:hover,
+				&:active,
+				&:focus {
+					border: 0.1875rem solid rgb(162, 209, 244);
+				}
+			}
+
+			&__textarea {
+				width: 100%;
+				height: 8rem;
+				margin-bottom: 0.3125rem;
+				padding: 10px 19px;
+				color: #00599A;
+				font-size: 1rem;
+				font-weight: 700;
+				border: 0.1875rem solid #FFF;
+				border-radius: 0.5rem;
+				background-color: #FFF;
+
+				&:hover,
+				&:active,
+				&:focus {
+					border: 0.1875rem solid rgb(162, 209, 244);
+				}
+			}
+
+			&__submit {
+				width: 50%;
+				padding: 0.5rem 2.9375rem 0.75rem;
+				text-align: center;
+				font-size: 1.125rem;
+				font-weight: 700;
+				color: #FFF;
+				border: 0.25rem solid #FFF;
+				border-radius: 5rem;
+				background-color: transparent;
+				transition: all .3s ease-in-out;
+
+				&:hover,
+				&:focus {
+					color: #065A97;
+					background-color: #FFF;
+					border-color: #FFF;
+				}
+
+				&:active {
+					color: #FFE400;
+					border-color: #FFE400;
+					background-color: transparent;
+				}
+
+				@media (min-width: 768px) {
+					width: auto;
+					display: inline-block;
+					font-size: 1.25rem;
+				}
+
+				@media (min-width: 1200px) {
+					font-size: 1.375rem;
+				}
+			}
+
+			&__success {
+				background-color: #FFF;
+				position: relative;
+				display: block;
+				border-radius: 0.5rem;
+				color: #4CAF50;
+				padding: 0.3125rem 0.9375rem 0.5rem;
+				font-weight: 700;
+				margin-bottom: 0.9375rem;
+				margin-top: 0.125rem;
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
+
+label.error {
+	position: relative;
+	display: block;
+	padding: 0.3125rem 0.9375rem 0.5rem;
+	margin-bottom: 0.9375rem;
+	margin-top: 0.125rem;
+	font-weight: 700;
+	background-color: #C62828;
+	border-radius: 0.5rem;
+	color: #FFF;
+
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: 100%;
+		left: 1.25rem;
+		margin-left: -0.75rem;
+		width: 0;
+		height: 0;
+		border-bottom: 0.75rem solid #C62828;
+		border-right: 0.75rem solid transparent;
+		border-left: 0.75rem solid transparent;
+	}
+}
+
+.skype-phone__wrap {
+	display: flex;
+	justify-content: space-between;
+
+	input:first-child {
+		margin-right: 0.3125rem;
+	}
+}
+
+.contact-form__open {
+	color: #FFF;
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		color: #0000FF;
+	}
+}
+
+.contact-form__title-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

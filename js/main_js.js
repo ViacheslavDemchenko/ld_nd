@@ -36,9 +36,11 @@ window.addEventListener('DOMContentLoaded', function () {
 		if (scrolled > 70) {
 			//Если прокрутка превышает 70px, фон становится светлым
 			header.classList.add('header--grey');
+			header.style.boxShadow = '0px 10px 33px -5px grey';
 		} else {
 			//Если прокрутка меньше 70px, фон становится прежним
 			header.classList.remove('header--grey');
+			header.style.boxShadow = 'none';
 		}
 	});
 
@@ -46,8 +48,10 @@ window.addEventListener('DOMContentLoaded', function () {
 	function screenSizeCheck() {
 		if (scrolled > 70 || width < 993) {
 			header.classList.add('header--grey');
+			header.style.boxShadow = '0px 10px 33px -5px grey';
 		} else {
 			header.classList.remove('header--grey');
+			header.style.boxShadow = 'none';
 		}
 	};
 	screenSizeCheck();

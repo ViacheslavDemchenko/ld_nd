@@ -95,8 +95,9 @@ let	header = document.querySelector('.header');//Фон меню сайта
 
 //СМЕНА КАРТИНОК И ТЕКСТА В РАЗДЕЛЕ PRINCIPLES
 
-	let pictures = document.querySelectorAll('.principles-img'),//Псевдомассив картинок
+	let pictures = document.querySelectorAll('.principles__img'),//Псевдомассив картинок
 		articles = document.querySelectorAll('.principles__article'),//Псевдомассив статей
+		slider = document.getElementById('principles-row'),//Контейнер картинок и текстов
 		articleIndex = 0,//Текущая (активная) статья
 		pictureIndex = 0;//Текущая (активная) картинка
 
@@ -104,7 +105,7 @@ let	header = document.querySelector('.header');//Фон меню сайта
 		
 //Удаление активного класса у текущей статьи
 		articles[articleIndex].classList.remove('principles__article--active');
-		pictures[pictureIndex].classList.remove('principles-img--active');
+		pictures[pictureIndex].classList.remove('principles__img--active');
 		articleIndex += 1;//Увеличение индекса статьи(выбор следующей статьи)
 		pictureIndex += 1;//Увеличение индекса картинки(выбор следующей картинки)
 
@@ -119,10 +120,22 @@ let	header = document.querySelector('.header');//Фон меню сайта
 
 //Присвоение активного класса следующей статье
 		articles[articleIndex].classList.add('principles__article--active');
-		pictures[pictureIndex].classList.add('principles-img--active');
+		pictures[pictureIndex].classList.add('principles__img--active');
 	};
 
-	let timeinterval = setInterval(imgTextChange, 5000); 
+//Приостановка автоматического переключения слайдов 
+//при наведении курсора на контейнер
+	slider.addEventListener('mouseenter', () => {
+		clearInterval(sliderInterval);
+	});
+
+//Возобновление автоматического переключения слайдов 
+//при выводе курсора за пределы контейнера
+	slider.addEventListener('mouseleave', () => {
+		sliderInterval = setInterval(imgTextChange, 5000);
+	});
+
+	let sliderInterval = setInterval(imgTextChange, 5000); 
 
 // ВЫВОД ТЕКУЩЕГО ГОДА В ФУТЕРЕ
 

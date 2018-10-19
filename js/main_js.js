@@ -102,10 +102,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	//СМЕНА КАРТИНОК И ТЕКСТА В РАЗДЕЛЕ PRINCIPLES
 
-	var pictures = document.querySelectorAll('.principles-img'),
+	var pictures = document.querySelectorAll('.principles__img'),
 	    //Псевдомассив картинок
 	articles = document.querySelectorAll('.principles__article'),
 	    //Псевдомассив статей
+	slider = document.getElementById('principles-row'),
+	    //Контейнер картинок и текстов
 	articleIndex = 0,
 	    //Текущая (активная) статья
 	pictureIndex = 0; //Текущая (активная) картинка
@@ -114,7 +116,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		//Удаление активного класса у текущей статьи
 		articles[articleIndex].classList.remove('principles__article--active');
-		pictures[pictureIndex].classList.remove('principles-img--active');
+		pictures[pictureIndex].classList.remove('principles__img--active');
 		articleIndex += 1; //Увеличение индекса статьи(выбор следующей статьи)
 		pictureIndex += 1; //Увеличение индекса картинки(выбор следующей картинки)
 
@@ -129,10 +131,22 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		//Присвоение активного класса следующей статье
 		articles[articleIndex].classList.add('principles__article--active');
-		pictures[pictureIndex].classList.add('principles-img--active');
+		pictures[pictureIndex].classList.add('principles__img--active');
 	};
 
-	var timeinterval = setInterval(imgTextChange, 5000);
+	//Приостановка автоматического переключения слайдов 
+	//при наведении курсора на контейнер
+	slider.addEventListener('mouseenter', function () {
+		clearInterval(sliderInterval);
+	});
+
+	//Возобновление автоматического переключения слайдов 
+	//при выводе курсора за пределы контейнера
+	slider.addEventListener('mouseleave', function () {
+		sliderInterval = setInterval(imgTextChange, 5000);
+	});
+
+	var sliderInterval = setInterval(imgTextChange, 5000);
 
 	// ВЫВОД ТЕКУЩЕГО ГОДА В ФУТЕРЕ
 

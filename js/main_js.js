@@ -140,15 +140,15 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	//Приостановка автоматического переключения слайдов 
 	//при наведении курсора на контейнер
-	slider.addEventListener('mouseenter', function () {
-		clearInterval(sliderInterval);
-	});
+	// slider.addEventListener('mouseenter', () => {
+	// 	clearInterval(sliderInterval);
+	// });
 
 	//Возобновление автоматического переключения слайдов 
 	//при выводе курсора за пределы контейнера
-	slider.addEventListener('mouseleave', function () {
-		sliderInterval = setInterval(imgTextChange, 5000);
-	});
+	// slider.addEventListener('mouseleave', () => {
+	// 	sliderInterval = setInterval(imgTextChange, 5000);
+	// });
 
 	var sliderInterval = setInterval(imgTextChange, 5000);
 
@@ -188,7 +188,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.body.classList.remove('no-scroll'); //Снятие запрета на прокрутку экрана
 	});
 
-	//Закрытие модального окна подарка по клику за его пределами
+	//Закрытие модального окна по клику за его пределами
 	window.addEventListener('click', function (e) {
 		var target = e.target;
 		if (target.closest('.contact-form__wrap') && !target.closest('.contact-form__close')) {
@@ -198,4 +198,26 @@ window.addEventListener('DOMContentLoaded', function () {
 			document.body.classList.remove('no-scroll'); //Снятие запрета на прокрутку экрана
 		}
 	});
+
+	// ПЕРЕКЛЮЧЕНИЕ ФОТО В РАЗДЕЛЕ ABOUT ME
+
+	var images = document.querySelectorAll('.about-me__personal-photo'),
+	    //Псевдомассив фото
+	tabs = document.querySelectorAll('.tab-label'); //Псевдомассив табов
+
+	function imageChange() {
+		var _loop = function _loop(i) {
+			tabs[i].addEventListener('click', function () {
+				for (var j = 0; j < images.length; j++) {
+					images[j].classList.remove('about-me__personal-photo--active');
+				}
+				images[i].classList.add('about-me__personal-photo--active');
+			});
+		};
+
+		for (var i = 0; i < tabs.length; i++) {
+			_loop(i);
+		}
+	};
+	imageChange();
 });

@@ -63,11 +63,11 @@
 					</div>
 					<div class="col-lg-12 col-xl-5">
 						<nav class="menu">
-							<ul class="menu__list">
-								<li class="menu__list__item"><a href="#contacts" class="menu__list__link">Контакты</a></li>
-								<li class="menu__list__item"><a href="#help" class="menu__list__link">Помощь психолога</a></li>
-								<li class="menu__list__item"><a href="#articles" class="menu__list__link">Статьи</a></li>
-								<li class="menu__list__item"><a href="#about-me" class="menu__list__link">Обо мне</a></li>
+							<ul class="menu__list" role="menubar">
+								<li class="menu__list__item" role="menuitem"><a href="#contacts" class="menu__list__link">Контакты</a></li>
+								<li class="menu__list__item" role="menuitem"><a href="#help" class="menu__list__link">Помощь психолога</a></li>
+								<li class="menu__list__item" role="menuitem"><a href="#articles" class="menu__list__link">Статьи</a></li>
+								<li class="menu__list__item" role="menuitem"><a href="#about-me" class="menu__list__link">Обо мне</a></li>
 							</ul>
 						</nav>	
 					</div>
@@ -78,7 +78,7 @@
 				<div class="header__bg"> 
 					<div class="header__bg__wrap">
 						<div class="header__bg__img"></div>
-						<div class="timer wow fadeInDown">
+						<div class="timer">
 							<p class="timer__text">На протяжении ограниченного периода времени я предлагаю Вам БЕСПЛАТНУЮ первую консультацию. Длительность первой сесии 30 минут.</p>
 							<h3 class="timer__title">Предложение действительно еще:</h3>
 							<div class="timer__numbers" id="clockdiv">
@@ -331,19 +331,23 @@
 		<div class="container container__pt">
 			<div class="row">
 				<div class="col-md-6 col-lg-6 about-me--pb">
-					<div class="about-me__img__wrap wow slideInLeft">
-						<img class="about-me__personal__photo" src="img/about-me/demchenko_nadezhda.jpeg" width="540" height="500" alt="Демченко Надежда - гештальт терапевт, кризисный психолог" title="Демченко Надежда - гештальт терапевт, кризисный психолог">
+					<div class="about-me__img-wrap wow slideInLeft">
+						<img class="about-me__personal-photo about-me__personal-photo--active" src="img/about-me/demchenko-nadezhda-1-@1x.jpeg" alt="Демченко Надежда - гештальт терапевт, кризисный психолог" title="Демченко Надежда - гештальт терапевт, кризисный психолог" srcset="img/about-me/demchenko-nadezhda-1-@1x.jpeg 1x, img/about-me/demchenko-nadezhda-1-@2x.jpeg 2x" width="540" height="500">
+
+						<img class="about-me__personal-photo" src="img/about-me/demchenko-nadezhda-2-@1x.jpeg" alt="Демченко Надежда - гештальт терапевт, кризисный психолог" title="Демченко Надежда - гештальт терапевт, кризисный психолог" srcset="img/about-me/demchenko-nadezhda-2-@1x.jpeg 1x, img/about-me/demchenko-nadezhda-2-@2x.jpeg 2x" width="540" height="500">
+						
+						<img class="about-me__personal-photo" src="img/about-me/demchenko-nadezhda-3-@1x.jpeg" alt="Демченко Надежда - гештальт терапевт, кризисный психолог" title="Демченко Надежда - гештальт терапевт, кризисный психолог" srcset="img/about-me/demchenko-nadezhda-3-@1x.jpeg 1x, img/about-me/demchenko-nadezhda-3-@2x.jpeg 2x" width="540" height="500">
 						<p class="about-me__personal__photo__text">Демченко Надежда - гештальт терапевт, кризисный психолог</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-6">
 					<div class="about-me-tabs column wow slideInRight">
 						<input class="tab__input" type="radio" name="nav" id="one" checked="checked"/>
-						<label for="one">What</label>
+						<label class="tab-label" for="one">What</label>
 						<input class="tab__input"  type="radio" name="nav" id="two"/>
-						<label for="two">Where</label>
+						<label class="tab-label" for="two">Where</label>
 						<input class="tab__input" type="radio" name="nav" id="three"/>
-						<label for="three">Why</label>
+						<label class="tab-label" for="three">Why</label>
 						<article class="tab tab--one">
 						    <h3 class="tab__title">What is Lorem Ipsum?</h3>
 						    <p class="tab__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -393,16 +397,16 @@
 				<div class="col-md-6 col-lg-4">
 					<ul class="social__list">
 						<li class="social__list__item wow fadeInDown" data-wow-delay="0.2s">
-							<a href="https://www.facebook.com/Nadezhda88gestalt" class="social__list__link facebook__link" target="blank"></a>
+							<a href="https://www.facebook.com/Nadezhda88gestalt" class="social__list__link facebook__link" target="blank" aria-label="Фейсбук"></a>
 						</li>
 						<li class="social__list__item wow fadeInDown" data-wow-delay="0.4s">
-							<a href="#" class="social__list__link telegram__link" target="blank"></a>
+							<a href="#" class="social__list__link telegram__link" target="blank" aria-label="Телеграм"></a>
 						</li>
 						<li class="social__list__item wow fadeInDown" data-wow-delay="0.6s">
-							<a href="#" class="social__list__link instagram__link" target="blank"></a>
+							<a href="#" class="social__list__link instagram__link" target="blank" aria-label="Инстаграм"></a>
 						</li>							
 						<li class="social__list__item wow fadeInDown" data-wow-delay="0.8s">
-							<a href="https://vk.com/nadinedem" class="social__list__link vkontakte__link" target="blank"></a>
+							<a href="https://vk.com/nadinedem" class="social__list__link vkontakte__link" target="blank" aria-label="Вконтакте"></a>
 						</li>
 					</ul>
 					<div class="row margin-top">
@@ -416,7 +420,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="contact-form__title-wrap">
-								<p class="contact-form__open wow fadeInUp">
+								<p class="contact-form__open wow fadeInUp" title="Форма обратной связи" aria-label="Отправить сообщение через форму обратной связи">
 									Связаться со мной
 								</p>
 							</div>
@@ -430,13 +434,12 @@
 				<div class="col-md-6 col-lg-4">
 					<h4 class="advert__title wow slideInRight">Разработка сайтов под заказ</h4>
 					<div class="btn-wrap wow slideInRight">
-						<a href="https://vk.com/demchenko_vyacheslav" class="site-order-btn" target="blank">заказать сайт</a>
+						<a href="https://vk.com/demchenko_vyacheslav" class="site-order-btn" target="blank" aria-label="Кнопка заказать сайт">заказать сайт</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-
 	<div class="contact-form__overlay wow zoomInDown">
 		<div class="contact-form__wrap">
 			<h3 class="contact-form__title">Связаться со мной</h3>
@@ -445,15 +448,15 @@
 				<input type="hidden" name="project_name" value="Мой персональный сайт">
 				<input type="hidden" name="form_from" value="admin@personal-site.zzz.com.ua">
 				<input type="hidden" name="admin_email" value="demchenko_slava_@mail.ru">
-				<input type="hidden" name="form_subject" value="Сообщение с сайта">
-				<input type="text" class="contact-form__input" name="name" placeholder="Имя">
-				<input type="text" class="contact-form__input" name="email" placeholder="Email">
+				<input type="hidden" name="form_subject" value="Сообщение с сайта" required>
+				<input type="text" class="contact-form__input" name="name" placeholder="Имя" aria-label="Поле для ввода имени">
+				<input type="text" class="contact-form__input" name="email" placeholder="Email" aria-label="Поле для ввода email" required>
 				<div class="skype-phone__wrap">
-					<input type="text" class="contact-form__input" name="skype" placeholder="Skype">
-					<input type="text" class="contact-form__input" name="phone" placeholder="Телефон">
+					<input type="text" class="contact-form__input" name="skype" placeholder="Skype" aria-label="Поле для ввода скайпа">
+					<input type="text" class="contact-form__input" name="phone" placeholder="Телефон" aria-label="Поле для ввода телефона">
 				</div>
-					<textarea class="contact-form__textarea" placeholder="Ваше сообщение" name="message"></textarea>
-				<input type="submit" class="contact-form__submit" value="Отправить">
+					<textarea class="contact-form__textarea" placeholder="Ваше сообщение" name="message" aria-label="Поле для ввода сообщения" required></textarea>
+				<input type="submit" class="contact-form__submit" value="Отправить" aria-label="Кнопка отправить сообщение через форму обратной связи">
 			</form>
 			<div id="answer"></div>
 		</div>
@@ -465,6 +468,7 @@
 <script src="lib/pagescroll2id/jquery.malihu.PageScroll2id.js"></script>
 <script src="lib/jquery.validate/jquery.validate.js"></script>
 <script src="lib/wowjs/wow.min.js"></script>
+<script src="lib/bootstrap_4_grid/js/bootstrap.min.js"></script>
 <script src="js/main_js.js"></script>
 <script src="js/main_jq.js"></script>
 <!-- <script src="js/index.js"></script> -->

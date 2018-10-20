@@ -6,22 +6,27 @@
 	&__title {
 		margin: 0;
 		text-align: center;
-		font-family: 'Roboto-Bold';
-		font-style: normal;
-		font-weight: bold;
+		.roboto-bold;
 	}
 
-	&__img__wrap {
+	&__img-wrap {
 		position: relative;
 		width: 100%;
 		height: auto;
 	}
 
-	&__personal__photo {
+	&__personal-photo {
+		display: none;
 		border: 0.625rem solid #fff;
 		border-radius: 10px;
 	 	border-bottom: 2.8125rem solid #fff;
 		box-shadow: 0 0.3125rem 0.3125rem 0.1875rem rgba(169, 169, 169, .8);
+
+		&--active {
+			display: block;
+			animation-name: fadeInLeft;
+			animation-duration: 1s;
+		}
 	}
 
 	&__personal__photo__text {
@@ -68,8 +73,8 @@
 		margin-bottom: 1rem;
 		border-radius: 0.3125rem;
 		font-size: 1.5rem;
-	    font-weight: 700;
 	    cursor: pointer;
+	    .roboto-bold;
 
 	    @media (min-width: 375px) {
 	    	padding: 0.8rem 2rem;
@@ -92,9 +97,15 @@
 	}
 
 	&__title {
-		font-family: 'Roboto-Bold';
-		font-weight: bold;
 		margin-top: 3rem;
+		animation-name: fadeInRight;
+		animation-duration: 1s;
+		.roboto-bold;
+	}
+
+	&__text {
+		animation-name: fadeInDown;
+		animation-duration: 1s;
 	}
 }
 

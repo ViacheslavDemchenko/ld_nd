@@ -1,11 +1,11 @@
 body,
 html{
-	font-size: 12px;
-	color: #000;
 	overflow-x: hidden;
-	font-family: 'Roboto-Regular';
-	font-weight: normal;
+	font-family: 'Roboto-Regular', Arial, sans-serif;
+	font-weight: 400;
   	font-style: normal;
+  	font-size: 12px;
+	color: #000;
 
 	@media (min-width: 576px) {
 		font-size: 13px;
@@ -33,13 +33,22 @@ html{
 }
 
 .container__pt {
-	padding-top: 4rem;
+	padding-top: 1rem;
 	min-height: 28.75rem;
+
+	@media (min-width: 992px) {
+		padding-top: 4rem;
+	}
 }
 
 .container__pt__pb--smaller {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	@media (min-width: 992px) {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
 }
 
 .margin-right {
@@ -48,6 +57,10 @@ html{
 
 .margin-top {
 	margin-top: 2rem;
+}
+
+.row--margin-top {
+	margin-top: 1rem;
 }
 
 .margin-top--mobile {
@@ -81,6 +94,6 @@ img {
 
 .browserupgrade a {
 	color: #FFF;
-	font-weight: 800;
+	.roboto-bold;
 }
 

@@ -209,8 +209,9 @@ window.addEventListener('DOMContentLoaded', function () {
 		var _loop = function _loop(i) {
 			tabs[i].addEventListener('click', function () {
 				for (var j = 0; j < images.length; j++) {
+					//Удаление указанного класса у всех элементов
 					images[j].classList.remove('about-me__personal-photo--active');
-				}
+				} //Добавление указанного класса к элементу, соответствующему активному табу
 				images[i].classList.add('about-me__personal-photo--active');
 			});
 		};

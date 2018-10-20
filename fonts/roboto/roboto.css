@@ -21,3 +21,15 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Roboto-BoldItalic';
+  src: url('roboto-bolditalic.woff') format('woff'),
+       url('roboto-bolditalic.ttf') format('truetype'),
+       url('roboto-bolditalic.svg#roboto-bolditalic') format('svg'),
+       url('robotobolditalic.eot'),
+       url('robotobolditalic.woff2') format('woff2'),
+       url('robotobolditalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+}

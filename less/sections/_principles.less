@@ -1,7 +1,12 @@
 .principles {
 	position: relative;
-	padding-bottom: 2em;
-	padding-top: 4rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+
+	@media (min-width: 992px) {
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+	}
 
 	&__img {
 		display: none;
@@ -35,7 +40,7 @@
 
 	&__article--active {
 		display: block;
-		padding-bottom: 3rem;
+		padding-bottom: 4rem;
 	}
 }
 

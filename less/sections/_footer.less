@@ -22,11 +22,9 @@
 	}
 
 	&__desc {
-		font-family: 'Roboto Bold Italic';
 		font-size: 1em;
-		font-weight: 700;
-	    font-style: italic;
 		color: #FFF;
+		.Roboto-BoldItalic;
 	}
 
 	&-contacts__link {
@@ -170,7 +168,6 @@
 
 .site-order-btn {
 	display: block;
-	margin-top: 1.875rem;
 	padding: 0.9375rem 1.875rem;
 	text-transform: uppercase;
 	border-radius: 2rem;
@@ -178,6 +175,10 @@
 	cursor: pointer;
 	transition: all .3s ease-in-out;
 	.roboto-bold;
+
+	@media (min-width: 992px) {
+		margin-top: 1.875rem;
+	}
 
 		&:hover,
 		&:focus,

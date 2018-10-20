@@ -193,9 +193,9 @@ let	header = document.querySelector('.header');//Фон меню сайта
 	function imageChange() {
 		for (let i = 0; i < tabs.length; i++) {
 			tabs[i].addEventListener('click', () => {
-				for (let j = 0; j < images.length; j++) {
+				for (let j = 0; j < images.length; j++) {//Удаление указанного класса у всех элементов
 					images[j].classList.remove('about-me__personal-photo--active');
-				}
+				}//Добавление указанного класса к элементу, соответствующему активному табу
 				images[i].classList.add('about-me__personal-photo--active');
 			});
 		}

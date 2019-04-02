@@ -49,54 +49,6 @@ let	header = document.querySelector('.header');//Фон меню сайта
 	};
 	screenSizeCheck();
 
-//ТАЙМЕР ОБРАТНОГО ОТСЧЕТА
-
-//Функция получения времени
-	function getTimeRemaining(endtime) {
-            let t = Date.parse(endtime) - Date.parse(new Date()),
-	            seconds = Math.floor((t / 1000) % 60),
-	            minutes = Math.floor((t / 1000 / 60) % 60),
-	            hours = Math.floor((t / (1000 * 60 * 60)) % 24),
-	            days = Math.floor(t / (1000 * 60 * 60 * 24));
-
-            return {
-                'total': t,
-                'days': days,
-                'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds
-            };
-        };
-
-        function initializeClock(id, endtime) {
-            let clock = document.getElementById(id),
-	            daysSpan = clock.querySelector('.days'),
-	            hoursSpan = clock.querySelector('.hours'),
-	            minutesSpan = clock.querySelector('.minutes'),
-	            secondsSpan = clock.querySelector('.seconds');
-
-            function updateClock() {
-                let t = getTimeRemaining(endtime);
-
-                daysSpan.innerHTML = t.days;
-                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-                if (t.total <= 0) {
-                    clearInterval(timeinterval);
-                }
-            };
-            updateClock();
-
-            let timeinterval = setInterval(updateClock, 1000);
-        };
-		
-			let end = new Date();
-				end.setHours(23,59,59,999);
-		
-        initializeClock('clockdiv', end);
-
 //СМЕНА КАРТИНОК И ТЕКСТА В РАЗДЕЛЕ PRINCIPLES
 
 	let pictures = document.querySelectorAll('.principles__img'),//Псевдомассив картинок
@@ -127,18 +79,6 @@ let	header = document.querySelector('.header');//Фон меню сайта
 		pictures[pictureIndex].classList.add('principles__img--active');
 	};
 
-//Приостановка автоматического переключения слайдов 
-//при наведении курсора на контейнер
-	// slider.addEventListener('mouseenter', () => {
-	// 	clearInterval(sliderInterval);
-	// });
-
-//Возобновление автоматического переключения слайдов 
-//при выводе курсора за пределы контейнера
-	// slider.addEventListener('mouseleave', () => {
-	// 	sliderInterval = setInterval(imgTextChange, 5000);
-	// });
-
 	let sliderInterval = setInterval(imgTextChange, 5000); 
 
 // ВЫВОД ТЕКУЩЕГО ГОДА В ФУТЕРЕ
@@ -156,49 +96,4 @@ let	header = document.querySelector('.header');//Фон меню сайта
 	};
 	getYear();
 
-//ОТКРЫТИЕ ФОРМЫ ОБРАТНОЙ СВЯЗИ (МОДАЛЬНОГО ОКНА)
-//И ЗАПРЕТ ПРОКРУТКИ ЭКРАНА ПРИ ОТКРЫТОЙ ФОРМЕ ОБРАТНОЙ СВЯЗИ	
-
-	let form = document.querySelector('.contact-form__overlay'),//Подложка
-		formOpen = document.querySelector('.contact-form__open'),//Ссылка для открытия модального окна
-		formClose = document.querySelector('.contact-form__close'),//Кнопка закрытия модального окна
-		body = document.body;//Body
-
-		formOpen.addEventListener('click', () => {
-			form.style.display = 'block';//Открытие модельного окна
-			document.body.classList.add('no-scroll');//Запрет на прокрутку экрана
-		});
-
-		formClose.addEventListener('click', () => {
-			form.style.display = 'none';//Закрытие модельного окна
-			document.body.classList.remove('no-scroll');//Снятие запрета на прокрутку экрана
-		});
-
-//Закрытие модального окна по клику за его пределами
-	window.addEventListener('click', (e) => {
-	    let target = e.target;
-	        if(target.closest('.contact-form__wrap') && !target.closest('.contact-form__close')) {
-		        e.stopPropagation();
-	        } else if (target.closest('.contact-form__overlay')) {
-		        form.style.display = 'none';
-		        document.body.classList.remove('no-scroll');//Снятие запрета на прокрутку экрана
-		    }
-	});
-
-// ПЕРЕКЛЮЧЕНИЕ ФОТО В РАЗДЕЛЕ ABOUT ME
-
-	let images = document.querySelectorAll('.about-me__personal-photo'),//Псевдомассив фото
-		tabs = document.querySelectorAll('.tab-label');//Псевдомассив табов
-
-	function imageChange() {
-		for (let i = 0; i < tabs.length; i++) {
-			tabs[i].addEventListener('click', () => {
-				for (let j = 0; j < images.length; j++) {//Удаление указанного класса у всех элементов
-					images[j].classList.remove('about-me__personal-photo--active');
-				}//Добавление указанного класса к элементу, соответствующему активному табу
-				images[i].classList.add('about-me__personal-photo--active');
-			});
-		}
-	};
-	imageChange();
 });
